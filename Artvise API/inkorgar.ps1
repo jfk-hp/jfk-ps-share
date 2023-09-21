@@ -51,7 +51,7 @@ foreach($inboxDto in $inboxDtoArray){
 		[pscustomobject]@{
 		
 			'Inkorg fullständigt namn'	= $inboxDto.FullName
-			'Inkorg GUID'				= $inboxDto.InboxGuid
+			'Inkorg GUID'			= $inboxDto.InboxGuid
 		
 		}
 	
@@ -63,10 +63,10 @@ foreach($inboxDto in $inboxDtoArray){
 
 Add-Type -AssemblyName System.Windows.Forms
 
-$openFileDialog						= New-Object System.Windows.Forms.SaveFileDialog
+$openFileDialog				= New-Object System.Windows.Forms.SaveFileDialog
 $openFileDialog.initialDirectory	= [Environment]::GetFolderPath("Desktop")
-$openFileDialog.filter				= "CSV (MS-DOS)|*.csv"
-$openFileDialog.FileName			= "$(Get-Date -f yyMMdd) Artvise inkorgar"
+$openFileDialog.filter			= "CSV (MS-DOS)|*.csv"
+$openFileDialog.FileName		= "$(Get-Date -f yyMMdd) Artvise inkorgar"
 
 $odfResult = $openFileDialog.ShowDialog()
 

@@ -63,10 +63,10 @@ foreach($deedDto in $deedDtoArray){
 
 Add-Type -AssemblyName System.Windows.Forms
 
-$openFileDialog						= New-Object System.Windows.Forms.SaveFileDialog
+$openFileDialog				= New-Object System.Windows.Forms.SaveFileDialog
 $openFileDialog.initialDirectory	= [Environment]::GetFolderPath("Desktop")
-$openFileDialog.filter				= "CSV (MS-DOS)|*.csv"
-$openFileDialog.FileName			= "$(Get-Date -f yyMMdd) Artvise handlingstyper"
+$openFileDialog.filter			= "CSV (MS-DOS)|*.csv"
+$openFileDialog.FileName		= "$(Get-Date -f yyMMdd) Artvise handlingstyper"
 
 $odfResult = $openFileDialog.ShowDialog()
 

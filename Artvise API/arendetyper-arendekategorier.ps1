@@ -52,7 +52,7 @@ foreach($itemDto in $itemDtoArray){
 	
 	$categoryDtoArray = $itemDto.CaseCategories.CaseCategoryDto
 	
-    foreach($categoryDto in $categoryDtoArray){
+	foreach($categoryDto in $categoryDtoArray){
 		
 		$genericList.Add(
 		
@@ -67,7 +67,7 @@ foreach($itemDto in $itemDtoArray){
 		
 		)
 		
-    }
+	}
 	
 }
 

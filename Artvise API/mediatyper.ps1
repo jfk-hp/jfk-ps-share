@@ -50,7 +50,7 @@ foreach($mediaDto in $mediaDtoArray){
 	
 		[pscustomobject]@{
 		
-			'Mediatyp'		= $mediaDto.Name
+			'Mediatyp'	= $mediaDto.Name
 			'Mediatyp GUID'	= $mediaDto.MediaTypeGuid
 		
 		}
@@ -63,10 +63,10 @@ foreach($mediaDto in $mediaDtoArray){
 
 Add-Type -AssemblyName System.Windows.Forms
 
-$openFileDialog						= New-Object System.Windows.Forms.SaveFileDialog
+$openFileDialog				= New-Object System.Windows.Forms.SaveFileDialog
 $openFileDialog.initialDirectory	= [Environment]::GetFolderPath("Desktop")
-$openFileDialog.filter				= "CSV (MS-DOS)|*.csv"
-$openFileDialog.FileName			= "$(Get-Date -f yyMMdd) Artvise mediatyper"
+$openFileDialog.filter			= "CSV (MS-DOS)|*.csv"
+$openFileDialog.FileName		= "$(Get-Date -f yyMMdd) Artvise mediatyper"
 
 $odfResult = $openFileDialog.ShowDialog()
 

@@ -58,9 +58,9 @@ foreach($itemDto in $itemDtoArray){
 		
 			[pscustomobject]@{
 			
-				'Ärendetyp'				= $itemDto.Fullname
-				'Ärendetyp GUID'		= $itemDto.DiaryPlanItemGuid
-				'Ärendekategori'		= $categoryDto.Name
+				'Ärendetyp'		= $itemDto.Fullname
+				'Ärendetyp GUID'	= $itemDto.DiaryPlanItemGuid
+				'Ärendekategori'	= $categoryDto.Name
 				'Ärendekategori GUID'	= $categoryDto.CaseCategoryGuid
 			
 			}
@@ -75,10 +75,10 @@ foreach($itemDto in $itemDtoArray){
 
 Add-Type -AssemblyName System.Windows.Forms
 
-$openFileDialog						= New-Object System.Windows.Forms.SaveFileDialog
+$openFileDialog				= New-Object System.Windows.Forms.SaveFileDialog
 $openFileDialog.initialDirectory	= [Environment]::GetFolderPath("Desktop")
-$openFileDialog.filter				= "CSV (MS-DOS)|*.csv"
-$openFileDialog.FileName			= "$(Get-Date -f yyMMdd) Artvise ärendekategorier ärendetyper"
+$openFileDialog.filter			= "CSV (MS-DOS)|*.csv"
+$openFileDialog.FileName		= "$(Get-Date -f yyMMdd) Artvise ärendekategorier ärendetyper"
 
 $odfResult = $openFileDialog.ShowDialog()
 

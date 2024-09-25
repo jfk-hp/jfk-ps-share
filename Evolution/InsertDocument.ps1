@@ -50,7 +50,7 @@ $evolutionInsertDocumentBody = @"
 					<!-- notering -->
 					<evol:Note>REPLACE-ME</evol:Note>
 					<!-- handläggare -->
-					<evol:ResponsibleLoginName>?</evol:ResponsibleLoginName>
+					<evol:ResponsibleLoginName>REPLACE-ME</evol:ResponsibleLoginName>
 					<!-- namn på tjänst kopplat till API-nyckeln -->
 					<evol:ServiceName>OpenE</evol:ServiceName>
 				</tem:request>

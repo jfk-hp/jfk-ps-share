@@ -63,7 +63,7 @@ $evolutionInsertDocumentBody = @"
 $evolutionInsertDocumentInvokeParams = @{
 	Method		= 'POST'
 	ContentType	= 'application/soap+xml; charset=utf-8'
-	URI		= $evolutionServiceUriApiKey
+	URI			= $evolutionServiceUriApiKey
 	Body		= $evolutionInsertDocumentBody
 }
 
